@@ -1,0 +1,5 @@
+<nav class="navbar">
+    {% for link in layout.navbar %}
+        <a href="{{ link.url }}" title="{{ link.desc }}"  class="navbar__item">{{ link.name }}</a>
+    {% endfor %}
+</nav>

@@ -1,0 +1,17 @@
+<nav class="navmobile">
+    <input type="checkbox" id="check__hamburguer">
+
+    <label for="check__hamburguer">
+        <div class="navmobile__button">
+            <span class="navmobile__button__hamburguer"></span>
+        </div>
+    </label>
+
+    <ul class="navmobile__container">
+        {% for link in layout.navbar %}
+            <li class="navmobile__item"></li>
+                <a href="{{ link.url }}" title="{{ link.desc }}"  class="navmobile__link">{{ link.name }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</nav>

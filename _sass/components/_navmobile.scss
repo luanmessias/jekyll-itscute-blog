@@ -1,0 +1,80 @@
+.navmobile{
+
+    input{
+        display: none;
+    }
+
+    @media #{$res-xs} {
+        
+    }
+    @media #{$res-sm} {
+        
+    }
+    @media #{$res-md} {
+        display: none;
+    }
+    @media #{$res-lg} {
+        display: none;
+    }
+    @media #{$res-xl} {
+        display: none;
+    }
+    
+    
+
+    @at-root #{&}__button {
+        @include flexbox(flex, column, wrap, center, center, center);
+        @include border-radius(50%);
+        @include transition;
+        background-color: $color-primary-dark;
+        width: 60px;
+        height: 60px;
+        position: fixed;
+        right: 25px;
+        bottom: 25px;
+        cursor: pointer;
+        @at-root #{&}__hamburguer{
+            position: relative;
+            &,
+            &:before,
+            &:after{
+                @include transition;
+                display: block;
+                background-color: #FFF;
+                width: 25px;
+                height: 3px;
+            }
+
+            &:before,
+            &:after{
+                position: absolute;
+                content: "";
+            }
+
+            &:before{
+                top: -8px;
+            }
+
+            &:after{
+                bottom: -8px;
+            }
+        }
+    }
+    
+
+    input:checked ~ label .navmobile__button{
+        @include rotate(45);
+
+        @at-root #{&}__hamburguer{
+            &:before,
+            &:after{
+                @include rotate(90);
+                top: 0;
+                bottom: 0;
+            }
+        }
+    }
+
+
+
+}
