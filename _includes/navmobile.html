@@ -8,8 +8,11 @@
     </label>
 
     <ul class="navmobile__container">
+        <li>
+
+        </li>
         {% for link in layout.navbar %}
-            <li class="navmobile__item"></li>
+            <li class="navmobile__item">
                 <a href="{{ link.url }}" title="{{ link.desc }}"  class="navmobile__link">{{ link.name }}</a>
             </li>
         {% endfor %}
