@@ -8,8 +8,10 @@
     </label>
 
     <ul class="navmobile__container">
-        <li>
-
+        <li class="navmobile__item--logo">
+            <a href="index">
+                <img src="{{ "/assets/img/logo-mobile.png" | relative_url }}" alt="">
+            </a>
         </li>
         {% for link in layout.navbar %}
             <li class="navmobile__item">

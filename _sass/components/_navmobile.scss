@@ -25,9 +25,9 @@
     @at-root #{&}__button {
         @include flexbox(flex, column, wrap, center, center, center);
         @include border-radius(50%);
-        @include transition;
         -webkit-tap-highlight-color: transparent;
         box-shadow: 0 0 0 0px $color-primary-dark, 0 0 0 0px $color-primary-dark;
+        transition: box-shadow .8s cubic-bezier(.19,1,.22,1);
         background-color: $color-primary-dark;
         width: 50px;
         height: 50px;
@@ -47,17 +47,14 @@
                 width: 25px;
                 height: 3px;
             }
-
             &:before,
             &:after{
                 position: absolute;
                 content: "";
             }
-
             &:before{
                 top: -8px;
             }
-
             &:after{
                 bottom: -8px;
             }
@@ -79,7 +76,6 @@
     
 
     @at-root #{&}__container{
-        @include transition;
         @include opacity(0);
         visibility: hidden;
         position: absolute;
@@ -90,12 +86,14 @@
         margin: 0px;
         padding: 0px;
         text-align: center;
+        transition: .25s 0s cubic-bezier(0, 1.07, 0, 1.02);
+        z-index: 2; 
+
     }
     
     input:checked ~ .navmobile__container{
        @include opacity(1);
-       visibility:visible;
+       visibility: visible;
     }
-
 
 }
