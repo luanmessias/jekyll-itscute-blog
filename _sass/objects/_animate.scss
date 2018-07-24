@@ -8,14 +8,16 @@
  * Copyright (c) 2018 Daniel Eden
  */
 
-.animated {
+.animated,
+%animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
 
-.animated.infinite {
+.animated.infinite,
+%infinite {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
@@ -111,7 +113,8 @@
   }
 }
 
-.bounce {
+.bounce,
+%bounce {
   -webkit-animation-name: bounce;
   animation-name: bounce;
   -webkit-transform-origin: center bottom;

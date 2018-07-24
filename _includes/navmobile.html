@@ -1,4 +1,5 @@
 <nav class="navmobile">
+    
     <input type="checkbox" id="check__hamburguer">
 
     <label for="check__hamburguer">
@@ -7,16 +8,29 @@
         </div>
     </label>
 
-    <ul class="navmobile__container">
-        <li class="navmobile__item--logo">
+    <div class="navmobile__container">
+
+        <div class="navmobile__container__logo">
             <a href="index">
-                <img class="navmobile__item--logoImg" src="{{ "/assets/img/logo-mobile.png" | relative_url }}" alt="">
+                <img class="navmobile__container__logo__img" src="{{ "/assets/img/logo-mobile.png" | relative_url }}" alt="">
             </a>
-        </li>
-        {% for link in layout.navbar %}
-            <li class="navmobile__item">
-                <a href="{{ link.url }}" title="{{ link.desc }}"  class="navmobile__link">{{ link.name }}</a>
-            </li>
-        {% endfor %}
-    </ul>
+        </div>
+
+        <nav class="navmobile__container__nav">
+            {% for link in layout.navbar %}
+                <div class="navmobile__container__nav__item">
+                    <a href="{{ link.url }}" title="{{ link.desc }}"  class="navmobile__container__nav__item__link">{{ link.name }}</a>
+                </div>
+            {% endfor %}
+        </nav>
+
+        <div class="navmobile__container__socialbar">
+            {% for link in layout.socialbar %}
+                <a href="{{ link.url }}" title="{{ link.desc }}" class="navmobile__container__socialbar__link">
+                    <i class="fab fa-{{link.name}} navmobile__container__socialbar__link__icon"></i>
+                </a>
+            {% endfor %}
+        </div>
+
+    </div>
 </nav>

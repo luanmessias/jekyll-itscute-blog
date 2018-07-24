@@ -1,15 +1,9 @@
-.navmobile{
-
-    input{
+.navmobile {
+    input {
         display: none;
     }
-
-    @media #{$res-xs} {
-        
-    }
-    @media #{$res-sm} {
-        
-    }
+    @media #{$res-xs} {}
+    @media #{$res-sm} {}
     @media #{$res-md} {
         display: none;
     }
@@ -19,15 +13,12 @@
     @media #{$res-xl} {
         display: none;
     }
-
-     
-
     @at-root #{&}__button {
         @include flexbox(flex, column, wrap, center, center, center);
         @include border-radius(50%);
         -webkit-tap-highlight-color: transparent;
         box-shadow: 0 0 0 0px $color-primary-dark, 0 0 0 0px $color-primary-dark;
-        transition: box-shadow .8s cubic-bezier(.19,1,.22,1);
+        transition: box-shadow .8s cubic-bezier(.19, 1, .22, 1);
         background-color: $color-primary-dark;
         width: 50px;
         height: 50px;
@@ -35,12 +26,11 @@
         right: 15px;
         bottom: 15px;
         cursor: pointer;
-
-        @at-root #{&}__hamburguer{
+        @at-root #{&}__hamburguer {
             position: relative;
             &,
             &:before,
-            &:after{
+            &:after {
                 @include transition;
                 display: block;
                 background-color: #FFF;
@@ -48,76 +38,84 @@
                 height: 3px;
             }
             &:before,
-            &:after{
+            &:after {
                 position: absolute;
                 content: "";
             }
-            &:before{
+            &:before {
                 top: -8px;
             }
-            &:after{
+            &:after {
                 bottom: -8px;
             }
         }
     }
-
-    input:checked ~ label .navmobile__button{
+    input:checked~label .navmobile__button {
         box-shadow: 0 0 0 105vw #1e374e, 0 0 0 120vh $color-primary-dark;
         @include rotate(45);
-        @at-root #{&}__hamburguer{
+        @at-root #{&}__hamburguer {
             &:before,
-            &:after{
+            &:after {
                 @include rotate(90);
                 top: 0;
                 bottom: 0;
             }
         }
     }
-    
-
-    @at-root #{&}__container{
+    @at-root #{&}__container {
         @extend %box-sizing;
         @include opacity(0);
         visibility: hidden;
         position: absolute;
-        width: 100%;
-        top: 44%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        top: 0;
+        width: 100vw;
+        height: calc(100vh - 75px);
         list-style: none;
         margin: 0px;
         padding: 0px;
         text-align: center;
         transition: all .20s 0s cubic-bezier(0, 1.07, 0, 1.02);
-        z-index: 2; 
-    }
-
-    @at-root #{&}__item{
-        text-align: right;
-        padding: 10px;
-
-        @at-root #{&}--logo{
-            margin-bottom: 10px;
-
+        z-index: 2;
+        @at-root #{&}__logo {
+            position: absolute;
+            left: 8vw;
+            top: 3vh;
+            @at-root #{&}__img {
+                height: auto;
+                max-width: 250px;
+            }
+        }
+        @at-root #{&}__nav {
+            position: absolute;
+            top: 32vh;
+            right: 8vw;
+            @at-root #{&}__item {
+                text-align: right;
+                padding: 10px;
+                @at-root #{&}__link {
+                    color: #FFF;
+                    font-size: 20px;
+                    &:hover {
+                        font-weight: bold;
+                    }
+                }
+            }
         }
 
-        @at-root #{&}--logoImg{
-            max-width: 200px;
-            height: auto;
+        @at-root #{&}__socialbar {
+            position: absolute;
+            bottom: 30px;
+            left:  0;
+            width: 100%;
+            @at-root #{&}__link {
+                margin: 10px;
+                font-size: 30px;
+                color: #FFF;
+            }
         }
     }
-
-    @at-root #{&}__link{
-        color: #FFF;
-        font-size: 20px;
-        &:hover{
-            font-weight: bold;
-        }
+    input:checked~.navmobile__container {
+        @include opacity(1);
+        visibility: visible;
     }
-    
-    input:checked ~ .navmobile__container{
-       @include opacity(1);
-       visibility: visible;
-    }
-
 }
