@@ -63,6 +63,7 @@
         }
     }
     @at-root #{&}__container {
+        @include flexbox(flex, column, wrap, space-around, center, flex-start);
         @extend %box-sizing;
         @include opacity(0);
         visibility: hidden;
@@ -77,18 +78,13 @@
         transition: all .20s 0s cubic-bezier(0, 1.07, 0, 1.02);
         z-index: 2;
         @at-root #{&}__logo {
-            position: absolute;
-            left: 8vw;
-            top: 3vh;
             @at-root #{&}__img {
                 height: auto;
                 max-width: 250px;
             }
         }
         @at-root #{&}__nav {
-            position: absolute;
-            top: 32vh;
-            right: 8vw;
+            @include flexbox(flex, row, wrap, center, center, flex-start);
             @at-root #{&}__item {
                 text-align: right;
                 padding: 10px;
@@ -103,10 +99,6 @@
         }
 
         @at-root #{&}__socialbar {
-            position: absolute;
-            bottom: 30px;
-            left:  0;
-            width: 100%;
             @at-root #{&}__link {
                 margin: 10px;
                 font-size: 30px;
