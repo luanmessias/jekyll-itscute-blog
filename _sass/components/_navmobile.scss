@@ -98,6 +98,12 @@
 
         @at-root #{&}--logo{
             margin-bottom: 10px;
+
+        }
+
+        @at-root #{&}--logoImg{
+            max-width: 200px;
+            height: auto;
         }
     }
 
