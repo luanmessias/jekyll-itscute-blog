@@ -62,7 +62,7 @@
     }
 
     input:checked ~ label .navmobile__button{
-        box-shadow: 0 0 0 120vw $color-primary-dark, 0 0 0 120vh $color-primary-dark;
+        box-shadow: 0 0 0 105vw #1e374e, 0 0 0 120vh $color-primary-dark;
         @include rotate(45);
         @at-root #{&}__hamburguer{
             &:before,
@@ -76,19 +76,37 @@
     
 
     @at-root #{&}__container{
+        @extend %box-sizing;
         @include opacity(0);
         visibility: hidden;
         position: absolute;
-        top: 30%;
+        width: 100%;
+        top: 44%;
         left: 50%;
         transform: translate(-50%, -50%);
         list-style: none;
         margin: 0px;
         padding: 0px;
         text-align: center;
-        transition: .25s 0s cubic-bezier(0, 1.07, 0, 1.02);
+        transition: all .20s 0s cubic-bezier(0, 1.07, 0, 1.02);
         z-index: 2; 
+    }
 
+    @at-root #{&}__item{
+        text-align: right;
+        padding: 10px;
+
+        @at-root #{&}--logo{
+            margin-bottom: 10px;
+        }
+    }
+
+    @at-root #{&}__link{
+        color: #FFF;
+        font-size: 20px;
+        &:hover{
+            font-weight: bold;
+        }
     }
     
     input:checked ~ .navmobile__container{
