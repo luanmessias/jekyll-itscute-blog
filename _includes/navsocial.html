@@ -2,7 +2,7 @@
 <div class="socialbar">
     {% for link in layout.socialbar %}
         <a href="{{ link.url }}" title="{{ link.desc }}" class="socialbar__link">
-            <i class="fab fa-{{link.name}} socialbar__icon"></i>
+            <i class="fab fa-{{link.name}} socialbar__link__icon"></i>
         </a>
     {% endfor %}
 </div>

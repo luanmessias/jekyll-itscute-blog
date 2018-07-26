@@ -20,7 +20,7 @@
         width: 40%;
     }
 
-    @at-root #{&}__item {
+    @include e('item') {
         @include transition(null, .2s, null);
         font-size: 12px;
         color: $color-secondary-dark;
@@ -28,4 +28,5 @@
             color: #000;
         }
     }
+    
 }
