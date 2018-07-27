@@ -52,22 +52,31 @@
 .headghost{
     @include transition;
     width: 100%;
-    display: block;
-
+    display: block;    
+    
     @media #{$res-xs} {
-        height: 223px;
+        height: 220px;
+    }
+    @media #{$res-400} {
+        height: 185px;
+    }
+    @media #{$res-350} {
+        height: 185px;
+    }
+    @media #{$res-300} {
+        height: 155px;
     }
     @media #{$res-sm} {
         height: 280px;
     }
     @media #{$res-md} {
-        height: 343px;
+        height: 340px;
     }
     @media #{$res-lg} {
-        height: 422px;
+        height: 420px;
     }
     @media #{$res-xl} {
-        height: 502px;
+        height: 500px;
     }
 
 
