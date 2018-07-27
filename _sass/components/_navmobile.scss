@@ -47,6 +47,7 @@
         right: 15px;
         bottom: 15px;
         cursor: pointer;
+        z-index: 2;
         @include e('hamburguer') {
             position: relative;
             &,

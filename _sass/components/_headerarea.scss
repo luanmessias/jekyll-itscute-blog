@@ -1,0 +1,40 @@
+.headerarea {
+    @include flexbox(flex, row, nowrap, center, flex-end, center);
+    background-image: url("../../assets/img/bg-header.jpg");
+    background-size: cover;
+    position: fixed;
+    width: 100%;
+    height: 500px;
+
+    @include e("wrapper") {
+        @include flexbox(flex, row, nowrap, center, center, center);
+
+        @include e("link") {
+            text-align: center;
+
+            @include e("img") {
+                @include transition;
+
+                @media #{$res-xs} {
+                    width: 70%;
+                }
+                @media #{$res-sm} {
+
+                }
+                @media #{$res-md} {
+                    width: 60%;
+                }
+                @media #{$res-lg} {
+                    width: 80%;
+                }
+                @media #{$res-xl} {
+                    width: 100%;
+                }
+
+                max-width: 400px;
+                height: auto;
+            }
+        }
+        
+    }
+}
