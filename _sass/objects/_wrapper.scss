@@ -9,3 +9,14 @@
 }
 
 
+.row{
+    @include m("main"){
+        background-color: #F2F2F2;
+        position: relative;
+        //temp
+        min-height: 1200px;
+        //temp
+    } 
+}
+
+
