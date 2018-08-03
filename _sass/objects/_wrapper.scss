@@ -1,22 +1,65 @@
 .wrapper {
+  @extend %box-sizing;
+  @include transition;
+  @include m('main') {
+    @include flexbox(flex, row, wrap, space-between, flex-start, flex-start);
+  }
+
+  margin: 0 auto;
+  width: 100%;
+
+  @media #{$res-xl} {
+    max-width: 1200px;
+  }
+
+}
+
+.row {
+  @include m('main') {
     @include transition;
-    @extend %box-sizing;
-    margin: 0px auto;
-    width: 100%;
+    background-color: #F2F2F2;
+    padding: 15px;
+    min-height: 1200px;
+    position: relative;
+  }
+}
+
+.main{
+    @include transition;
+    @include flexbox(flex, row, wrap, space-between, flex-start, flex-start);
+
+    @media #{$res-xs} {
+      width: 100%;
+    }
+    @media #{$res-sm} {
+      width: 100%;
+    }
+    @media #{$res-md} {
+      width: calc(70% - 10px);
+    }
+    @media #{$res-lg} {
+      width: calc(70% - 10px);
+    }
     @media #{$res-xl} {
-        max-width: 1200px;
+      width: calc(70% - 10px);
     }
 }
 
-
-.row{
-    @include m("main"){
-        background-color: #F2F2F2;
-        position: relative;
-        //temp
-        min-height: 1200px;
-        //temp
-    } 
+.aside{
+    @include transition;
+    @media #{$res-xs} {
+      width: 100%;
+    }
+    @media #{$res-sm} {
+      width: 100%;
+    }
+    @media #{$res-md} {
+        width: calc(30% - 10px);
+    }
+    @media #{$res-lg} {
+        width: calc(30% - 10px);
+    }
+    @media #{$res-xl} {
+        width: calc(30% - 10px);
+    }
 }
-
-

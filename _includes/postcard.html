@@ -1,0 +1,46 @@
+
+{% for post in site.posts %}
+    <div class="postcard {% if post.master == true %}postcard--master{% endif %}">
+
+        <a href="#" class="postcard__ftlink">
+            <img class="postcard__ftlink__image" src="https://picsum.photos/1000/800/?random" alt="">
+        </a>
+
+        <a href="#" class="postcard__categories">{{ post.categories }}</a>
+
+        <a href="#" class="postcard__title">{{ post.title }}</a>
+
+        <span class="postcard__date">
+            
+
+            {{ post.date | date: "%d" }} de 
+            
+            {% case m %}
+                {% when '1' %}Janeiro
+                {% when '2' %}Fevereiro
+                {% when '3' %}Março
+                {% when '4' %}Abril
+                {% when '5' %}Maio
+                {% when '6' %}Junho
+                {% when '7' %}Julio
+                {% when '8' %}Agosto
+                {% when '9' %}Setembro
+                {% when '10' %}Outubro
+                {% when '11' %}Novembro
+                {% when '12' %}Dezemb ro
+            {% endcase %}
+
+            {% assign m = post.date | date: "%-m" %}
+
+            de {{ post.date | date: "%Y" }}
+        
+        </span>
+
+        {% if post.master == true %}
+            <span class="postcard__resume">{{ post.resume }}</span>
+        {% endif %}
+
+        <a href="#" class="postcard__link">LEIA MAIS</a>
+
+    </div>
+{% endfor %}
