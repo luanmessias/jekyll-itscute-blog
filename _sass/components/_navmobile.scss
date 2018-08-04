@@ -4,7 +4,6 @@
     width: 100vw;
     height: 100vh;
 
-
     @include e('check') {
         display: none;
     }
@@ -23,8 +22,8 @@
         @media #{$res-sm} {
             box-shadow: 0 0 0 160vw #FFF, 0 0 0 120vh #dedede;
         }
+        @include rotate(45);
         .navmob__button__hamburguer {
-            @include rotate(45);
             &:before,
             &:after {
                 @include rotate(90);
@@ -37,6 +36,7 @@
     input:checked~.navmob__container {
         @include opacity(1);
         visibility: visible;
+        position: fixed;
     }
     
     @include e('button') {
@@ -44,7 +44,7 @@
         @include border-radius(50%);
         -webkit-tap-highlight-color: transparent;
         box-shadow: 0 0 0 0px #46a4b1, 0 0 0 0px #46a4b1;
-        transition: box-shadow .8s cubic-bezier(.19, 1, .22, 1);
+        transition: all .8s cubic-bezier(.19, 1, .22, 1);
         background-color: #46a4b1;
         width: 50px;
         height: 50px;
@@ -52,10 +52,7 @@
         right: 15px;
         bottom: 15px;
         cursor: pointer;
-        z-index: 99;
-
         @include e('hamburguer') {
-            @include transition;
             position: relative;
             &,
             &:before,
@@ -78,11 +75,9 @@
                 bottom: -8px;
             }
         }
-
     }
     @include e('container') {
         @include flexbox(flex, column, wrap, space-around, center, flex-start);
-        @include transition;
         @include opacity(0);
         @extend %box-sizing;
         visibility: hidden;
@@ -94,7 +89,8 @@
         margin: 0px;
         padding: 0px;
         text-align: center;
-        z-index: 99;
+        transition: all .20s 0s cubic-bezier(0, 1.07, 0, 1.02);
+        z-index: 2;
         @include e('logo') {
             @include e('link') {
                 height: auto;
