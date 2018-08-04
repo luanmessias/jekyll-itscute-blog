@@ -30,7 +30,7 @@
 
         <div class="aside__block__cont">
             {% for video in layout.youtube %}
-                <a class="aside__block__cont__youtube" href="{{ video.url }}" target="_blank">
+                <a class="aside__block__cont__youtube" rel="noreferrer" href="{{ video.url }}" target="_blank">
                     <img class="aside__block__cont__youtube__img" src="{{ "/assets/img/yt/date.jpg" | replace: "date", video.img | relative_url }}" alt="Ultima postagem no youtube">
                 </a>
             {% endfor %}
@@ -73,7 +73,12 @@
         </div>
 
         <div class="aside__block__cont">
-            sfddfdf
+            <form class="aside__block__cont__form" action="">
+                <input class="aside__block__cont__form__name" type="text" name="nome" placeholder="Nome" required>
+                <input class="aside__block__cont__form__mail" type="email" name="email" placeholder="E-Mail" required>
+                <textarea class="aside__block__cont__form__msg" placeholder="Mensagem" name="msg" id="msg" cols="30" rows="6" required></textarea>
+                <button class="aside__block__cont__form__submit" type="submit">ENVIAR MENSAGEM</button>
+            </form>
         </div>
 
     </div>

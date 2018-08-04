@@ -103,6 +103,47 @@
 
       }
 
+      @include e('form') {
+        @extend %box-sizing;
+        padding: 10px;
+        > input,
+        > textarea{
+          @extend %box-sizing;
+          @include fonte($system-font, normal, 14px, #000);
+          margin: 10px 0px; 
+          width: 100%;
+          padding: 15px;
+          border: 0px;
+          background-color: #dadada;
+        }
+
+        @include e('submit') {
+          @include flexbox(flex, row, wrap, center, center, center);
+          @include fonte($system-font, normal, 14px, #FFF);
+          @include box-sizing;
+          @include remove-shadow;
+          @include transition;
+          background-color: $color-secondary-dark;
+          padding: 10px;
+          width: 100%;
+          border: 0px;
+          cursor: pointer;
+          &:before{
+            @include set-icon($fa-var-envelope, 20px, 900, #FFF);
+            @include transition;
+            margin-right: 10px;
+          }
+          &:hover{
+            &:before{
+              color: #6b6b6b;
+            }
+            background-color: $color-secondary-default;
+            color: #6b6b6b;
+          }
+        }
+
+      }
+
     }
     
 

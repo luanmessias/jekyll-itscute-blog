@@ -301,8 +301,7 @@ $y) {
 }
 
 // skew
-@mixin skew ($x,
-$y) {
+@mixin skew ($x,$y) {
   @include transform(skew(#{$x}deg,
   #{$y}deg));
 }
@@ -315,6 +314,28 @@ $y) {
   -webkit-transform-origin: $origin;
   transform-origin: $origin;
 }
+
+@mixin remove-shadow(){
+  -webkit-box-shadow:0 0 0 transparent;
+  -moz-box-shadow:0 0 0 transparent;
+  box-shadow:0 0 0 transparent;
+}
+@mixin remove-textshadow(){
+  -webkit-text-shadow: none;
+  -moz-text-shadow: none;
+  -ms-text-shadow: none;
+  -o-text-shadow: none;
+  text-shadow: none;
+}
+
+@mixin box-sizing( $type: border-box ) {
+  -webkit-box-sizing: $type;
+  -moz-box-sizing: $type;
+  -o-box-sizing: $type;
+  -ms-box-sizing: $type;
+  box-sizing: $type;
+}
+
 
 @mixin e($element) {
   &__#{$element} {
