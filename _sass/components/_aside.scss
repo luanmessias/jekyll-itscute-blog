@@ -18,10 +18,11 @@
       @include flexbox(flex, column, wrap, center, flex-start, center);
       @include fonte($special-font, normal, 34px, #000);
       @extend %box-sizing;
-      background-image: url('./img/bg-aside-title.png');
+      background-image: url('./img/bg-flowers.png');
       background-color: #FFF;
       background-repeat: no-repeat;
-      background-position: top right;
+      background-size: 157%;
+      background-position: 17px -185px;
       width: 100%;
       padding: 4px;
       text-align: left;
@@ -70,6 +71,7 @@
         width: 100%;
         height: auto;
         position: relative;
+
         &:before{
           @include set-icon($fa-var-youtube, 0px, 900, $youtube_color, "brand");
           @include opacity(0);
@@ -78,12 +80,17 @@
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
+          z-index: 1;
         }
 
         &:hover{
            &:before{
             @include opacity(1);
             font-size: 45px;
+          }
+          .aside__block__cont__youtube__img{
+            @include opacity(.5);
+            border: 15px solid #6b6b6b;
           }
         }
        
@@ -92,10 +99,6 @@
           @include transition(null, .5s, null);
           width: 100%;
           height: auto;
-          &:hover{
-            @include opacity(.5);
-            border: 15px solid #6b6b6b;
-          }
         }
 
       }

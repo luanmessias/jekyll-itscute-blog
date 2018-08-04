@@ -3,7 +3,7 @@
     <div class="aside__block">
 
         <div class="aside__block__title">
-            <span class="aside__block__title__text">sobre mim</span>
+            <span class="aside__block__title__text">Sobre mim</span>
         </div>
 
         <div class="aside__block__cont">
@@ -21,10 +21,28 @@
 
     </div>
 
+
     <div class="aside__block">
 
         <div class="aside__block__title">
-            <span class="aside__block__title__text">facebook</span>
+            <span class="aside__block__title__text">Youtube</span>
+        </div>
+
+        <div class="aside__block__cont">
+            {% for video in layout.youtube %}
+                <a class="aside__block__cont__youtube" href="{{ video.url }}" target="_blank">
+                    <img class="aside__block__cont__youtube__img" src="{{ "/assets/img/yt/date.jpg" | replace: "date", video.img | relative_url }}" alt="Ultima postagem no youtube">
+                </a>
+            {% endfor %}
+        </div>
+
+    </div>
+
+
+    <div class="aside__block">
+
+        <div class="aside__block__title">
+            <span class="aside__block__title__text">Facebook</span>
         </div>
 
         <div class="aside__block__cont">
@@ -47,20 +65,20 @@
 
     </div>
 
+
     <div class="aside__block">
 
         <div class="aside__block__title">
-            <span class="aside__block__title__text">youtube</span>
+            <span class="aside__block__title__text">Contato</span>
         </div>
 
         <div class="aside__block__cont">
-
-            <a class="aside__block__cont__youtube" href="https://www.youtube.com/watch?v=4WP9ClFt3uo" target="_blank">
-                <img class="aside__block__cont__youtube__img" src="{{ "/assets/img/yt/23072018.jpg" | relative_url }}" alt="Ultima postagem no youtube">
-            </a>
-
+            sfddfdf
         </div>
 
     </div>
+
+
+
 
 </aside>
