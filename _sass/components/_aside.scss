@@ -1,0 +1,53 @@
+.aside {
+  @include e('block') {
+    @include flexbox(flex, column, wrap, flex-start, center, flex-start);
+    @extend %box-sizing;
+    width: 100%;
+    @include e('title') {
+      @extend %box-sizing;
+      width: 100%;
+      background: #FFF;
+      padding: 20px;
+      text-align: center;
+      margin-bottom: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+      -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+      -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+    }
+    @include e('profile') {
+      @include flexbox(flex, column, wrap, flex-start, center, flex-start);
+      @include e('photo') {
+        @include border-radius(50%);
+        @include box-shadow(-1px, 2px, 6px, #6b6b6b);
+        height: auto;
+        max-width: 150px;
+        border: 5px solid #dedede;
+      }
+      @include e('text') {
+        @extend %box-sizing;
+        width: 100%;
+        display: block;
+        padding: 20px 45px;
+        text-align: center;
+      }
+      @include e('contact') {
+        @include flexbox(flex, row, wrap, center, center, center);
+        margin-bottom: 20px;
+        @include e('icon') {
+          color: $color-primary-dark;
+          margin-right: 10px;
+        }
+        @include e('mail') {
+          font-size: 14px;
+          color: $color-primary-dark;
+        }
+      }
+    }
+    @include e('facebook') {
+      
+      @extend %box-sizing;
+      padding: 5px;
+      width: 100%;
+    }
+  }
+}

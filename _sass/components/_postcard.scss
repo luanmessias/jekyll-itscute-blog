@@ -18,7 +18,7 @@
     width: 100%;
     text-align: center;
     padding: 10px;
-    &:hover{
+    &:hover {
       color: #000;
     }
   }
@@ -32,7 +32,7 @@
     width: 100%;
     text-align: center;
     padding: 10px;
-    &:hover{
+    &:hover {
       color: $color-primary-default;
     }
   }
@@ -48,6 +48,15 @@
     &:hover{
       color: $color-primary-default;
     }
+  }
+
+  @include e('resume') {
+    @include fonte($system-font, normal, 14px, rgb(121, 121, 121));
+    @include transition;
+    @extend %box-sizing;
+    width: 100%;
+    text-align: center;
+    padding: 30px;
   }
 
   @include e('link') {
