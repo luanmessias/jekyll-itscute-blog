@@ -1,0 +1,47 @@
+.footer {
+  position: relative;
+  background: #000;
+  @include e('instagram') {
+    position: relative;
+    @include e('link') {
+      @include fonte($system-font, normal, 14px, #000);
+      @include transition;
+      padding: 10px 20px;
+      background-color: rgba(255, 255, 255, .5);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      &:hover{
+        background-color: #000;
+        color: #FFF;
+      }
+    }
+
+    @include e('feed') {
+      @include e('img') {
+        width: calc(100% / 6);
+      }
+    }
+  }
+
+  @include e('wrapper') {
+    @include flexbox(flex, row, wrap, space-between, center, center);
+    padding: 40px 0px;
+  }
+
+  @include e('rights') {
+    @include fonte($system-font, normal, 11px, #a7a7a7);
+  }
+
+  @include e('madeby') {
+    @include fonte($system-font, normal, 11px, #a7a7a7);
+    @include e('icon') {
+      color: #e67272;
+    }
+    @include e('link') {
+      @include fonte($system-font, normal, 11px, #a7a7a7);
+    }
+  }
+
+}

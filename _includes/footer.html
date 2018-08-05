@@ -1,3 +1,21 @@
-<footer>
-  
+<footer class="footer">
+    
+    <div class="footer__instagram">
+        <a class="footer__instagram__link" target="_blank" href="https://goo.gl/R8Baee">@ITSCUTEBLOG</a>
+        <div class="footer__instagram__feed" id="instafeed"></div>
+    </div>
+
+    <div class="wrapper footer__wrapper">
+        <div class="footer__rights">
+            © {{ site.time | date: '%y' }} IT'S CUTE - ALL RIGHTS RESERVED
+        </div>
+        {%- include navsocial.html -%}  
+        <div class="footer__madeby">
+            MADE WITH <i class="fa fa-heart footer__madeby__icon" aria-hidden="true"></i>
+            BY <a class="footer__madeby__link" href="mailto:luanmessias03@gmail.com">LUAN MESSIAS</a>
+        </div>
+    </div>
+    
 </footer>
+<script type="text/javascript" src="{{ "/assets/js/instafeed.min.js" | relative_url }}"></script>
+<script type="text/javascript" src="{{ "/assets/js/main.js" | relative_url }}"></script>
