@@ -7,7 +7,7 @@
     
     @include e('link'){
         @include transition(null, .2s, null);
-        font-size: 22px;
+        font-size: 24 px;
         color: $color-secondary-dark;
         margin-left: 15px;
         > i{
