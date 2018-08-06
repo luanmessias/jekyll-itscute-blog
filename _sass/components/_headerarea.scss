@@ -1,5 +1,6 @@
 .headerarea {
     @include flexbox(flex, row, nowrap, center, flex-end, center);
+    @include box-sizing;
     @include transition;
     background-image: url("../../assets/img/bg-header.jpg");
     position: fixed;

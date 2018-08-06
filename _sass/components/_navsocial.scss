@@ -7,13 +7,29 @@
     
     @include e('link'){
         @include transition(null, .2s, null);
-        font-size: 20px;
+        font-size: 22px;
         color: $color-secondary-dark;
         margin-left: 15px;
-        &:hover {
-            color: #000;
+        > i{
+            @include transition(null, .2s, null);
         }
-
+        &:hover{
+            .fa-facebook{
+                color: $facebook_color;
+            }
+            .fa-twitter{
+                color: $twitter_color;
+            }
+            .fa-instagram{
+                color: $instagram_color;
+            }
+            .fa-pinterest{
+                color: $pinterest_color;
+            }
+            .fa-youtube{
+                color: $youtube_color;
+            }
+        }
     }
 }
 

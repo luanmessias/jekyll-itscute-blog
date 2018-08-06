@@ -15,20 +15,23 @@
         @extend %box-sizing;
         padding: 10px 0px 0px 20px;
       }
-      @include flexbox(flex, column, wrap, center, flex-start, center);
+      @include flexbox(flex, column, wrap, center, flex-start, flex-start);
       @include fonte($special-font, normal, 34px, #000);
       @extend %box-sizing;
-      background-image: url('./img/bg-flowers.png');
+      background-image: url('./img/bg-aside-title.png');
       background-color: #FFF;
       background-repeat: no-repeat;
-      background-size: 157%;
-      background-position: 17px -185px;
+      background-size: auto 100%;
+      background-position: top right;
       width: 100%;
       padding: 4px;
       text-align: left;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
       -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
       -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+
+      
+
     }
 
 
