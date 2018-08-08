@@ -21,6 +21,14 @@ function scrollBanner() {
  
 window.addEventListener('scroll', scrollBanner);
 
+(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v3.1';
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
 
 var feed = new Instafeed({
     get: 'user',
@@ -32,4 +40,12 @@ var feed = new Instafeed({
     template: '<img class="footer__instagram__feed__img" alt="{{caption}}" src="{{image}}" />'
 });
 feed.run();
+
+SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/search.json',
+    searchResultTemplate: '<li class="search__result__item fadeIn animated"><a class="search__result__item__link" href="{url}">{title}</a><span class="search__result__item__resume">{resume}</span></li>'
+});
+
 

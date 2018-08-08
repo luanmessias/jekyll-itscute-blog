@@ -1,0 +1,63 @@
+.search {
+  @include e('input') {
+    @include box-sizing;
+    @include border-radius(50px);
+    @include remove-shadow;
+    @include transition;
+    @include fonte($system-font, normal, 0px, #000);
+    background-image: url("../../assets/img/search-icon.png");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: center;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 10px;
+    border: 0px;
+    width: 40px;
+    &:hover {
+      background-image: url("../../assets/img/search-icon-hover.png");
+    }
+    &:focus {
+      @include fonte($system-font,
+      normal,
+      14px,
+      #000);
+      background-image: url("../../assets/img/search-icon-hover.png");
+      background-position: center 5px;
+      width: 250px;
+      background-color: rgb(228, 228, 228);
+      background-position: center right 16px;
+      cursor: text;
+    }
+  }
+  @include e('result') {
+    @include transition;
+    @include opacity(0);
+    visibility: hidden;
+    background-color: #FFF;
+    margin: 0;
+    padding: 0px;
+    position: absolute;
+    right: 0px;
+    top: 60px;
+    width: 450px;
+    @include e('item') {
+      @include box-sizing;
+      padding: 5px 15px;
+      list-style: none;
+      border-bottom: 1px solid #CCC;
+      @include e('link') {
+        @include fonte($system-font, bold, 18px, #555555);
+        display: block;
+      }
+      @include e('resume') {
+        @include fonte($system-font, normal, 12px, #a3a3a3);
+      }
+    }
+  }
+  .search__input:focus+.search__result {
+    @include opacity(1);
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+    visibility: visible;
+  }
+}

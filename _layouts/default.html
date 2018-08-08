@@ -59,7 +59,10 @@ youtube:
 
       <div class="wrapper wrapper--main">
 
-        {%- include mainHome.html -%}
+        
+        <main class="main">
+            {{ content }}
+        </main>
         
         {%- include aside.html -%}
 
@@ -67,8 +70,6 @@ youtube:
 
     </div>
 
-
-    {{ content }}
  
     {%- include footer.html -%}
 

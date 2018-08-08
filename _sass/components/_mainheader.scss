@@ -6,6 +6,9 @@
     @include flexbox(flex, row, wrap, space-between, center, center);
     @include transition;
     position: relative;
+    @include e('searchSocial') {
+      @include flexbox(flex, row, nowrap, center, center, center);
+    }
   }
   @include transition;
   @extend %box-sizing;
