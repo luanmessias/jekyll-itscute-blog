@@ -1,4 +1,13 @@
-<div id="search-container" class="search">
-  <input class="search__input" type="text" id="search-input" placeholder="Digite sua busca...">
-  <ul id="results-container" class="search__result"></ul>
+<div id="search-container-{{include.type}}" class="search">
+  <input class="search__input" type="text" id="search-input-{{include.type}}" placeholder="Digite sua busca...">
+  <ul id="results-container-{{include.type}}" class="search__result"></ul>
 </div>
+<script type="text/javascript" src="{{ "/assets/js/search.js" | relative_url }}"></script>
+<script type="text/javascript">
+  SimpleJekyllSearch({
+      searchInput: document.getElementById('search-input-{{include.type}}'),
+      resultsContainer: document.getElementById('results-container-{{include.type}}'),
+      json: '/search.json',
+      searchResultTemplate: '<li class="search__result__item fadeIn animated"><a class="search__result__item__link" href="{url}">{title}</a><span class="search__result__item__resume">{resume}</span></li>'
+  });
+</script>

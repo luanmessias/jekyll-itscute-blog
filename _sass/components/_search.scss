@@ -1,5 +1,5 @@
 .search {
-   @include e('input') {
+  @include e('input') {
     @include box-sizing;
     @include border-radius(50px);
     @include remove-shadow;
@@ -18,7 +18,10 @@
       background-image: url("../../assets/img/search-icon-hover.png");
     }
     &:focus {
-      @include fonte($system-font, normal, 14px, #000);
+      @include fonte($system-font,
+      normal,
+      14px,
+      #000);
       background-image: url("../../assets/img/search-icon-hover.png");
       background-position: center 5px;
       width: 250px;
@@ -57,21 +60,4 @@
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
     visibility: visible;
   }
-
-  @media #{$res-xs-sm} {
-    background-color: rgb(228, 228, 228);
-    position: fixed;
-    width: 100%;
-    left: 0;
-    top: 0;
-    .search__input,
-    .search__input:focus {
-      @include fonte($system-font, normal, 14px, #000);
-      width: 100%;
-      background-color: rgb(228, 228, 228);
-      background-position: center right 16px;
-      background-image: url("../../assets/img/search-icon-hover.png");
-    }
-  }
-
 }

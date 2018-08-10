@@ -2,8 +2,11 @@
   @include flexbox(flex, row, wrap, space-between, center, center);
   @include transition;
   height: 80px;
+  
+  @media #{$res-xs-sm} {
+    display: none;
+  }
 
- 
   @include e('wrapper') {
     @include flexbox(flex, row, wrap, space-between, center, center);
     @include transition;
@@ -40,15 +43,6 @@
     .logo {
       position: relative;
       transform: scale(.6);
-    }
-  }
-
-  @media #{$res-xs-sm} {
-    height: 40px;
-    .logo,
-    .navbar,
-    .socialbar{
-      display: none;
     }
   }
 

@@ -41,11 +41,5 @@ var feed = new Instafeed({
 });
 feed.run();
 
-SimpleJekyllSearch({
-    searchInput: document.getElementById('search-input'),
-    resultsContainer: document.getElementById('results-container'),
-    json: '/search.json',
-    searchResultTemplate: '<li class="search__result__item fadeIn animated"><a class="search__result__item__link" href="{url}">{title}</a><span class="search__result__item__resume">{resume}</span></li>'
-});
 
 
