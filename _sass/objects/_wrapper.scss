@@ -16,11 +16,12 @@
 
 .row {
   @include m('main') {
+    @include box-sizing;
     @include transition;
     background-color: #F2F2F2;
-    padding: 15px;
-    min-height: 1200px;
     position: relative;
+    width: 100%;
+    padding: 15px;
   }
 }
 
