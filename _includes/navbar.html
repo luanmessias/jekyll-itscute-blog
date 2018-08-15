@@ -1,5 +1,5 @@
 <nav class="navbar">
-    {% for link in layout.navbar %}
+    {% for link in site.data.vars.navbar %}
         <a href="{{ link.url }}" title="{{ link.desc }}"  class="navbar__item">{{ link.name }}</a>
     {% endfor %}
 </nav>

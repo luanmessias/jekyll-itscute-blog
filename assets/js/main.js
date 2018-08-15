@@ -41,5 +41,10 @@ var feed = new Instafeed({
 });
 feed.run();
 
-
-
+function scrollTo(element) {
+    scrollIt(
+        document.querySelector(element),
+        1000,
+        'easeInOutQuint'
+    );
+}

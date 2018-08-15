@@ -1,6 +1,6 @@
 
 <div class="socialbar">
-    {% for link in layout.socialbar %}
+    {% for link in site.data.vars.socialbar %}
         <a href="{{ link.url }}" title="{{ link.desc }}" class="socialbar__link socialbar__link--{{link.name}}">
             <i class="fab fa-{{link.name}} socialbar__link__icon"></i>
         </a>

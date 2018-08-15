@@ -1,14 +1,14 @@
 
 {% for post in site.posts %}
-    <div class="postcard {% if post.master == true %}postcard--master{% endif %}">
+    <div class="postcard {% if post.destaque == true %}postcard--master{% endif %}">
 
-        <a href="#" class="postcard__ftlink">
-            <img class="postcard__ftlink__image" src="https://picsum.photos/1000/800/?random" alt="">
+        <a href="{{ post.url }}" class="postcard__ftlink">
+            <img class="postcard__ftlink__image" src="{{ post.img }}" alt="">
         </a>
 
-        <a href="#" class="postcard__categories">{{ post.categories }}</a>
+        <a href="{{ post.url }}" class="postcard__categories">{{ post.categories }}</a>
 
-        <a href="#" class="postcard__title">{{ post.title }}</a>
+        <a href="{{ post.url }}" class="postcard__title">{{ post.title }}</a>
 
         <span class="postcard__date">
             
@@ -40,7 +40,7 @@
             <span class="postcard__resume">{{ post.resume }}</span>
         {% endif %}
 
-        <a href="#" class="postcard__link">LEIA MAIS</a>
+        <a href="{{ post.url }}" class="postcard__link">LEIA MAIS</a>
 
     </div>
 {% endfor %}

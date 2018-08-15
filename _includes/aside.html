@@ -29,7 +29,7 @@
         </div>
 
         <div class="aside__block__cont">
-            {% for video in layout.youtube %}
+            {% for video in site.data.vars.youtube %}
                 <a class="aside__block__cont__youtube" rel="noreferrer" href="{{ video.url }}" target="_blank">
                     <img class="aside__block__cont__youtube__img" src="{{ "/assets/img/yt/date.jpg" | replace: "date", video.img | relative_url }}" alt="Ultima postagem no youtube">
                 </a>
@@ -58,14 +58,14 @@
     </div>
 
 
-    <div class="aside__block">
+    <div id="contato" class="aside__block">
 
         <div class="aside__block__title">
             <span class="aside__block__title__text">Contato</span>
         </div>
 
         <div class="aside__block__cont">
-            <form class="aside__block__cont__form" action="">
+            <form  class="aside__block__cont__form" action="">
                 <input class="aside__block__cont__form__name" type="text" name="nome" placeholder="Nome" required>
                 <input class="aside__block__cont__form__mail" type="email" name="email" placeholder="E-Mail" required>
                 <textarea class="aside__block__cont__form__msg" placeholder="Mensagem" name="msg" id="msg" cols="30" rows="6" required></textarea>

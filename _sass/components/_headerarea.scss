@@ -30,9 +30,11 @@
 
                 @media #{$res-xs} {
                     width: 55%;
+                    margin-top: 25px;
                 }
                 @media #{$res-sm} {
                     width: 70%;
+                    margin-top: 25px;
                 }
                 @media #{$res-md} {
                     width: 60%;
@@ -81,6 +83,42 @@
     @media #{$res-xl} {
         height: 500px;
     }
+}
 
-
+.post {
+    .headerarea{
+        background-image: none;
+        background-color: #e3e3e3;
+    }
+    .headghost{
+        @include transition;
+        width: 100%;
+        display: block;    
+        
+        
+        @media #{$res-400} {
+            height: 200px;
+        }
+        @media #{$res-350} {
+            height: 185px;
+        }
+        @media #{$res-300} {
+            height: 127px;
+        }
+        @media #{$res-xs} {
+            height: 127px;
+        }
+        @media #{$res-sm} {
+            height: 166px;
+        }
+        @media #{$res-md} {
+            height: 240px;
+        }
+        @media #{$res-lg} {
+            height: 285px;
+        }
+        @media #{$res-xl} {
+            height: 337px;
+        }
+    }
 }

@@ -11,13 +11,13 @@
         display: none;
     }
     @media #{$res-md} {
-        width: 60%;
+        width: 35%;
     }
     @media #{$res-lg} {
-        width: 50%;
+        width: 35%;
     }
     @media #{$res-xl} {
-        width: 40%;
+        width: 35%;
     }
 
     @include e('item') {

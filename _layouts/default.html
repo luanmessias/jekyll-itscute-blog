@@ -1,56 +1,9 @@
----
-navbar:
-  - name: "HOME"
-    url: "index"
-    desc: "lorem ipsun"
-  - name: "PAGES"
-    url: "perfis"
-    desc: "lorem ipsun"
-  - name: "TRAVEL"
-    url: "perfis"
-    desc: "lorem ipsun"
-  - name: "LIFESTYLE"
-    url: "perfis"
-    desc: "lorem ipsun"
-  - name: "FEATURED"
-    url: "perfis"
-    desc: "lorem ipsun"
-  - name: "ABOUT ME"
-    url: "perfis"
-    desc: "lorem ipsun"
-  - name: "CONTACT"
-    url: "perfis"
-    desc: "lorem ipsun"
-
-socialbar:
-  - name: "facebook"
-    url: "http://facebook"
-    desc: "Lorem ipsun"
-  - name: "twitter"
-    url: "http://facebook"
-    desc: "Lorem ipsun"
-  - name: "instagram"
-    url: "http://facebook"
-    desc: "Lorem ipsun"
-  - name: "pinterest"
-    url: "http://facebook"
-    desc: "Lorem ipsun"
-  - name: "youtube"
-    url: "http://facebook"
-    desc: "Lorem ipsun"
-
-youtube:
-  - url: "https://www.youtube.com/watch?v=4WP9ClFt3uo"
-    img: "23072018"
----
-
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
   {%- include head.html -%}
 
-  <body>
-
+  <body {% if layout.page %} class="{{ layout.page }}" {% endif %}>
     {%- include header.html -%}
 
     {%- include headerarea.html -%}
@@ -63,7 +16,7 @@ youtube:
     <div class="row row--main">
 
       <div class="wrapper wrapper--main">
-
+        
         
         <main class="main">
             {{ content }}
