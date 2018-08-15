@@ -36,13 +36,13 @@
       width: 100%;
     }
     @media #{$res-md} {
-      width: calc(70% - 10px);
+      width: calc(70% - 20px);
     }
     @media #{$res-lg} {
-      width: calc(70% - 10px);
+      width: calc(70% - 20px);
     }
     @media #{$res-xl} {
-      width: calc(70% - 10px);
+      width: calc(70% - 20px);
     }
 }
 

@@ -3,27 +3,82 @@ layout: default
 page: post
 ---
 
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta">
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        {{ page.date | date: date_format }}
-      </time>
-      {%- if page.author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
-      {%- endif -%}</p>
+<article class="post"  itemtype="http://schema.org/BlogPosting">
+
+  <header class="post__header">
+
+    {%- if page.img != "" -%}
+      <img class="post__header__img" src="{{ page.img }}" alt="{{ page.title }}">
+    {%- endif -%}
+
+    <div class="post__header__info">
+      <span class="post__header__info__category">{{ page.categories }}</span>
+    </div>
+
+    <h1 class="post__header__title" itemprop="name headline">{{ page.title | escape }}</h1>
+
+
+    <time class="post__header__date"  datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+
+        {{ page.date | date: "%-d " }} de 
+        {% assign month = page.date | date: "%-m"  %}
+        {% case month %}
+          {% when '1' %}Janeiro
+          {% when '2' %}Fevereiro
+          {% when '3' %}Março
+          {% when '4' %}Abril
+          {% when '5' %}Maio
+          {% when '6' %}Junho
+          {% when '7' %}Julio
+          {% when '8' %}Agosto
+          {% when '9' %}Setembro
+          {% when '10' %}Outubro
+          {% when '11' %}Novembro
+          {% when '12' %}Dezembro
+        {% endcase %}
+        {{ page.date | date: "de %Y" }}
+        
+      </time>     
+
+
   </header>
 
-  <div class="post-content e-content" itemprop="articleBody">
+  <div class="post__content" itemprop="articleBody">
     {{ content }}
   </div>
 
-  {%- if site.disqus.shortname -%}
-    {%- include disqus_comments.html -%}
-  {%- endif -%}
+  <div class="post__share">
+    <span class="post__share__desc">COMPARTILHE:</span>
+    <a class="post__share__link post__share__link--twitter" href="http://twitter.com/intent/tweet?text={{page.title}}+{{site.url}}{{page.url}}" onclick="window.open(this.href, 'twitterwindow','left=20,top=20,width=600,height=300,toolbar=0,resizable=1'); return false;">
+      <i class="fab fa-twitter-square post__share__link__icon"></i>
+    </a> 
+    
+    <a class="post__share__link post__share__link--facebook" href="http://www.facebook.com/sharer.php?s=100&amp;p[title]={{ page.title }}&amp;p[summary]={{page.resume}}&amp;p[url]={{site.url}}{{page.url}}&amp;p[images[0]={{page.img}}" onclick="window.open(this.href, 'facebookwindow','left=20,top=20,width=600,height=700,toolbar=0,resizable=1'); return false;">
+      <i class="fab fa-facebook-square post__share__link__icon"></i>
+    </a>
+
+    <a class="post__share__link post__share__link--pinterest" href="http://pinterest.com/pin/create/bookmarklet/?media={{page.img}}&url={{site.url}}{{page.url}}&is_video=false&description={{page.resume}}" onclick="window.open(this.href, 'pinterestwindow','left=20,top=20,width=600,height=700,toolbar=0,resizable=1'); return false;">
+      <i class="fab fa-pinterest-square post__share__link__icon"></i>
+    </a>
+    
+    <a class="post__share__link post__share__link--gplus" href="https://plus.google.com/share?url={{site.url}}{{page.url}}" onclick="window.open(this.href, 'googlepluswindow','left=20,top=20,width=600,height=700,toolbar=0,resizable=1'); return false;">
+      <i class="fab fa-google-plus-square post__share__link__icon"></i>
+    </a>
+  </div>
+
+
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+
 </article>
+
+{%- if page.author  != "" -%}
+<span class="post__header__meta__author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <span class="p-author h-card" itemprop="name">{{ page.author }}</span>
+</span>
+{%- endif -%}
+
+{%- if site.disqus.shortname -%}
+{%- include disqus_comments.html -%}
+{%- endif -%}

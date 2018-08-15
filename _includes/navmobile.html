@@ -20,7 +20,7 @@
         </div>
 
         <nav class="navmob__container__nav">
-            {% for link in layout.navbar %}
+            {% for link in site.data.vars.navbar %}
                 <div class="navmob__container__nav__item">
                     <a href="{{ link.url }}" title="{{ link.desc }}"  class="navmob__container__nav__item__link">{{ link.name }}</a>
                 </div>
@@ -28,7 +28,7 @@
         </nav>
 
         <div class="navmob__container__socialbar">
-            {% for link in layout.socialbar %}
+            {% for link in site.data.vars.socialbar %}
                 <a href="{{ link.url }}" title="{{ link.desc }}" class="navmob__container__socialbar__link">
                     <i class="fab fa-{{link.name}} navmob__container__socialbar__link__icon"></i>
                 </a>
