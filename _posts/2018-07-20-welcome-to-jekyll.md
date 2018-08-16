@@ -1,12 +1,14 @@
 ---
 layout: post
+comments: true
+destaque: true
+author: "bruna"
 title:  "Welcome to Jekyll!"
 date:   2018-07-20 17:48:21 -0300
 categories: moda
 resume: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pellentesque urna eu elementum posuere. Aliquam erat volutpat. Donec feugiat tincidunt mi..."
 img: "https://picsum.photos/1000/800/?random"
-author: "Bruna Espinosa"
-destaque: true
+
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pellentesque urna eu elementum posuere. Aliquam erat volutpat. Donec feugiat tincidunt mi, id efficitur sapien scelerisque id. Mauris semper lobortis libero id dictum. Praesent nec scelerisque lacus. In molestie diam tortor, ac gravida ex feugiat quis. Nam molestie congue commodo. Pellentesque lectus justo, viverra eu arcu vel, vehicula imperdiet arcu. Praesent elementum bibendum metus, sit amet tincidunt orci. Nunc feugiat pellentesque porta. Etiam mattis orci purus, a varius arcu convallis sed. Pellentesque vulputate viverra nisl, ac dictum dolor. Duis ut felis non purus gravida lacinia pharetra non arcu. Nullam non felis ut felis elementum varius. Pellentesque sed maximus justo, quis molestie enim. Phasellus laoreet dolor ut faucibus varius.

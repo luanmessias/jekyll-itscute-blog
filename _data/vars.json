@@ -60,5 +60,40 @@
       "url": "https://www.youtube.com/watch?v=4WP9ClFt3uo",
       "img": "23072018"
     }
+  ],
+
+  "bruna": [
+    {
+      "name": "Bruna Espinosa",
+      "img": "ft-perfil1.jpg",
+      "desc": "Dicas de beleza, moda, gastronomia e lugares para visitar em São Paulo. Fique por dentro das novidades aqui no It's Cute.",
+      "social": [
+        {
+          "name": "facebook",
+          "url": "https://www.facebook.com/itscuteblog/",
+          "desc": "Facebook It`s Cute Blog"
+        },
+        {
+          "name": "twitter",
+          "url": "https://twitter.com/itscuteblog",
+          "desc": "Twitter It`s Cute Blog"
+        },
+        {
+          "name": "instagram",
+          "url": "https://www.instagram.com/itscuteblog/",
+          "desc": "Instagram It`s Cute Blog"
+        },
+        {
+          "name": "pinterest",
+          "url": "https://br.pinterest.com/itscuteblog/",
+          "desc": "Pinterest It`s Cute Blog"
+        },
+        {
+          "name": "youtube",
+          "url": "https://www.youtube.com/itscuteblog",
+          "desc": "YouTube It`s Cute Blog"
+        }
+      ]
+    }
   ]
 }
