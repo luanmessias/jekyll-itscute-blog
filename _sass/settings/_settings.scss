@@ -12,7 +12,7 @@ $system-font: "-apple-system",
 "Helvetica Neue",
 sans-serif;
 
-$special-font: 'Lobster', cursive;
+$special-font: 'Lobster', cursive, $system-font;
 
 $icon-font: "Font Awesome 5 Free";
 $brand-font: "Font Awesome 5 Brands";
