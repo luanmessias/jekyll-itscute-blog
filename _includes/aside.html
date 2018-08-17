@@ -30,7 +30,7 @@
 
         <div class="aside__block__cont">
             {% for video in site.data.vars.youtube %}
-                <a class="aside__block__cont__youtube" rel="noreferrer" href="{{ video.url }}" target="_blank">
+                <a class="aside__block__cont__youtube" rel="noreferrer" href="{{ video.url }}" target="_blank" rel="noreferrer">
                     <img class="aside__block__cont__youtube__img" src="{{ "/assets/img/yt/date.jpg" | replace: "date", video.img | relative_url }}" alt="Ultima postagem no youtube">
                 </a>
             {% endfor %}
@@ -50,7 +50,7 @@
             <div class="fb-page" data-href="https://www.facebook.com/itscuteblog/" data-width="500px" data-small-header="false" data-adapt-container-width="true"
                 data-hide-cover="false" data-show-facepile="true">
                 <blockquote cite="https://www.facebook.com/itscuteblog/" class="fb-xfbml-parse-ignore">
-                    <a href="https://www.facebook.com/itscuteblog/">It&#039;s Cute Blog</a>
+                    <a  href="https://www.facebook.com/itscuteblog/">It&#039;s Cute Blog</a>
                 </blockquote>
             </div>
         </div>
