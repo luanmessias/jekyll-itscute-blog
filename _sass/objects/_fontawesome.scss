@@ -3541,7 +3541,7 @@
    position: static;
    width: auto; }
  @font-face {
-   font-family: 'Font Awesome 5 Brands', sans-serif;
+   font-family: 'Font Awesome 5 Brands';
    font-style: normal;
    font-weight: normal;
    src: url("../../assets/fonts/fontawesome/fa-brands-400.eot");
@@ -3552,9 +3552,9 @@
         url("../../assets/fonts/fontawesome/fa-brands-400.svg#fontawesome") format("svg"); }
  
  .fab {
-   font-family: 'Font Awesome 5 Brands', sans-serif; }
+   font-family: 'Font Awesome 5 Brands'; }
  @font-face {
-   font-family: 'Font Awesome 5 Free', sans-serif;
+   font-family: 'Font Awesome 5 Free';
    font-style: normal;
    font-weight: 400;
    src: url("../../assets/fonts/fontawesome/fa-regular-400.eot");
@@ -3565,10 +3565,10 @@
         url("../../assets/fonts/fontawesome/fa-regular-400.svg#fontawesome") format("svg"); }
  
  .far {
-   font-family: 'Font Awesome 5 Free', sans-serif;
+   font-family: 'Font Awesome 5 Free';
    font-weight: 400; }
  @font-face {
-   font-family: 'Font Awesome 5 Free', sans-serif;
+   font-family: 'Font Awesome 5 Free';
    font-style: normal;
    font-weight: 900;
    src: url("../../assets/fonts/fontawesome/fa-solid-900.eot");
@@ -3580,6 +3580,6 @@
  
  .fa,
  .fas {
-   font-family: 'Font Awesome 5 Free', sans-serif;
+   font-family: 'Font Awesome 5 Free';
    font-weight: 900; }
  
