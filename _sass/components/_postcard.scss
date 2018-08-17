@@ -11,7 +11,7 @@
   }
 
   @include e('categories') {
-    @include fonte($system-font, normal, 14px, $color-primary-default);
+    @include fonte($system-font, normal, 14px, $color-primary-dark);
     @include transition;
     text-transform: uppercase;
     @extend %box-sizing;
@@ -38,7 +38,7 @@
   }
 
   @include e('date') {
-    @include fonte($system-font, normal, 12px, rgb(121, 121, 121));
+    @include fonte($system-font, normal, 13px, #494949);
     @include transition;
     @extend %box-sizing;
     width: 100%;
