@@ -1,7 +1,7 @@
 
 <div class="socialbar">
     {% for link in site.data.vars.socialbar %}
-        <a href="{{ link.url }}" target="_blank" title="{{ link.desc }}" class="socialbar__link socialbar__link--{{link.name}}">
+        <a href="{{ link.url }}" target="_blank" title="{{ link.desc }}" rel="noreferrer" class="socialbar__link socialbar__link--{{link.name}}">
             <i class="fab fa-{{link.name}} socialbar__link__icon"></i>
         </a>
     {% endfor %}

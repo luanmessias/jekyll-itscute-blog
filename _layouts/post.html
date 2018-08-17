@@ -82,7 +82,7 @@ page: post
           <span class="post__author__info__desc">{{ person.desc }}</span>
           <div class="post__author__info__social">
             {% for social in person.social %}
-                <a href="{{ social.url }}" target="_blank" title="{{ social.desc }}" class="post__author__info__social__link post__author__info__social__link--{{social.name}}">
+                <a href="{{ social.url }}" target="_blank" title="{{ social.desc }}" rel="noreferrer" class="post__author__info__social__link post__author__info__social__link--{{social.name}}">
                     <i class="fab fa-{{social.name}} post__author__info__social__link__icon"></i>
                 </a>
             {% endfor %}
