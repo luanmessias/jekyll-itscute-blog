@@ -37,7 +37,7 @@ var feed = new Instafeed({
     accessToken: '22827060.ba4c844.aa2e55c1f79947008c852de12e185569',
     resolution: 'standard_resolution',
     limit: 6,
-    template: '<img class="footer__instagram__feed__img" alt="{{caption}}" src="{{image}}" />'
+    template: '<img class="footer__instagram__feed__img" alt="{{caption}}" src="/assets/img/blank.jpg" data-echo="{{image}}" />'
 });
 feed.run();
 

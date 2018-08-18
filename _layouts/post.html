@@ -9,7 +9,7 @@ page: post
   <header class="post__header">
 
     {%- if page.img != "" -%}
-      <img class="post__header__img" src="{{ page.img }}" alt="{{ page.title }}">
+      <img class="post__header__img" src="{{ "/assets/img/blank-post.jpg" | relative_url }}" data-echo="{{ page.img }}" alt="{{ page.title }}">
     {%- endif -%}
 
     <div class="post__header__info">
@@ -76,7 +76,7 @@ page: post
 {%- if page.author  != "" -%}
   {% for person in site.data.vars[page.author] %}
     <div class="post__author" itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <img class="post__author__photo" src="{{ "/assets/img/photo" | relative_url | replace: "photo", person.img }}" alt="">
+        <img class="post__author__photo" src="{{ "/assets/img/blank.jpg" | relative_url }}" data-echo="{{ "/assets/img/photo" | relative_url | replace: "photo", person.img }}" alt="">
         <div class="post__author__info">
           <span class="post__author__info__name">{{ person.name }}</span>
           <span class="post__author__info__desc">{{ person.desc }}</span>

@@ -3,7 +3,7 @@
     <div class="postcard {% if post.destaque == true %}postcard--master{% endif %}">
 
         <a href="{{ post.url }}" aria-label="Acessar página sobre {{ post.title }}" class="postcard__ftlink">
-            <img class="postcard__ftlink__image" src="{{ post.img }}" alt="">
+            <img class="postcard__ftlink__image" src="{{ "/assets/img/blank-post.jpg" | relative_url }}" data-echo="{{ post.img }}" alt="">
         </a>
 
         <a href="{{ post.url }}" class="postcard__categories">{{ post.categories }}</a>

@@ -7,7 +7,7 @@
         </div>
 
         <div class="aside__block__cont">
-            <img class="aside__block__cont__photo" src="{{ "/assets/img/ft-perfil1.jpg" | relative_url }}" alt="">
+            <img class="aside__block__cont__photo" src="{{ "/assets/img/blank.jpg" | relative_url }}" data-echo="{{ "/assets/img/ft-perfil1.jpg" | relative_url }}" alt="">
             <span class="aside__block__cont__text">
                   <em>Bruna Espinosa </em> <br>
                  <br> Dicas de beleza, moda, gastronomia e lugares para visitar em São Paulo.
@@ -31,7 +31,7 @@
         <div class="aside__block__cont">
             {% for video in site.data.vars.youtube %}
                 <a class="aside__block__cont__youtube" rel="noreferrer" href="{{ video.url }}" target="_blank" rel="noreferrer">
-                    <img class="aside__block__cont__youtube__img" src="{{ "/assets/img/yt/date.jpg" | replace: "date", video.img | relative_url }}" alt="Ultima postagem no youtube">
+                    <img class="aside__block__cont__youtube__img" src="{{ "/assets/img/blank.jpg" | relative_url }}" data-echo="{{ "/assets/img/yt/date.jpg" | replace: "date", video.img | relative_url }}" alt="Ultima postagem no youtube">
                 </a>
             {% endfor %}
         </div>
