@@ -31,21 +31,29 @@
     }
   }
   @include e('result') {
+    @include box-sizing;
     @include transition;
     @include opacity(0);
     visibility: hidden;
-    background-color: #FFF;
     margin: 0;
-    padding: 0px;
     position: absolute;
     right: 0px;
     top: 60px;
     width: 450px;
+    padding: 10px;
     @include e('item') {
+      @include transition;
       @include box-sizing;
       padding: 5px 15px;
+      border: 10px solid;
+      border-color: rgba(0, 0, 0, .212);
+      border-collapse: collapse;
       list-style: none;
-      border-bottom: 1px solid #CCC;
+      background-color: #FFF;
+      box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+      &:hover{
+        background-color: #d6d6d6;
+      }
       @include e('link') {
         @include fonte($system-font, bold, 18px, #555555);
         display: block;
@@ -53,11 +61,27 @@
       @include e('resume') {
         @include fonte($system-font, normal, 12px, #a3a3a3);
       }
+
+
+      @include m('noresult') {
+        @include flexbox(flex, row, wrap, flex-start, center, center);
+        @media #{$res-xs-sm} {
+          @include flexbox(flex, column, wrap, flex-start, center, center);
+        }
+      }
+      
+      @include e('noicon') {
+        font-size: 45px;
+        color: #555555;
+        margin-right: 10px;
+      }
+      @include e('notext') {
+        @include fonte($system-font, normal, 16px, #a3a3a3);
+      }
     }
   }
   .search__input:focus+.search__result {
     @include opacity(1);
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
     visibility: visible;
   }
 }

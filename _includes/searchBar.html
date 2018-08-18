@@ -10,7 +10,7 @@
       searchInput: document.getElementById('search-input-{{include.type}}'),
       resultsContainer: document.getElementById('results-container-{{include.type}}'),
       json: '/search.json',
-      searchResultTemplate: '<li class="search__result__item fadeIn animated"><a class="search__result__item__link" href="{url}">{title}</a><span class="search__result__item__resume">{resume}</span></li>'
+      noResultsText: '<li class="search__result__item search__result__item--noresult fadeIn animated"><i class="far fa-sad-cry search__result__item__noicon"></i> <span class="search__result__item__notext">Ops, nenhum resultado encontrado</span></li>', 
+      searchResultTemplate: '<li class="search__result__item fadeIn animated"><a href="{url}"><span class="search__result__item__link">{title}</span><span class="search__result__item__resume">{resume}</span></a></li>'
   });
 </script>
- 
