@@ -48,6 +48,41 @@
         @include box-sizing;
         width: 100%;
         padding: 25px;
+
+        img{
+            width: 100%;
+            height: auto;
+        }
+
+        @include e('full'){
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        @include e('half'){
+            @include flexbox(flex, row, nowrap, flex-start, center, center);
+
+            img{
+                width: calc(50% - 15px);
+            }
+
+        }
+
+        a{
+            color: $color-primary-dark;
+        }
+
+        blockquote{
+            @include box-sizing;
+            width: 100%;
+            margin: 0px;
+            background-color: #f3f3f3;
+            border-left: 5px solid #b3b3b3;
+            padding: 10px 20px;
+        }
+
     }
     @include e('share') {
         @include flexbox(flex, row, nowrap, flex-end, center, center);

@@ -37,7 +37,8 @@ var feed = new Instafeed({
     accessToken: '22827060.ba4c844.aa2e55c1f79947008c852de12e185569',
     resolution: 'low_resolution',
     limit: 6,
-    template: '<img class="footer__instagram__feed__img" alt="{{caption}}" src="/assets/img/blank.jpg" data-echo="{{image}}" />'
+    //template: '<img class="footer__instagram__feed__img" alt="{{caption}}" src="/assets/img/blank.jpg" data-echo="{{image}}" orientation="{{square}}" />'
+    template: '<div class="footer__instagram__feed__cont" style="background-image: url({{image}})"></div>'
 });
 feed.run();
 
@@ -48,3 +49,5 @@ function scrollTo(element) {
         'easeInOutQuint'
     );
 }
+
+
