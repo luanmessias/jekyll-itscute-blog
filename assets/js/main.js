@@ -51,3 +51,10 @@ function scrollTo(element) {
 }
 
 
+grecaptcha.ready(function() {
+    grecaptcha.execute('6Lcuv4cUAAAAAHIUxwL7OiwWyY9XN4XQA_CHsT28', {action: 'action_name'})
+    .then(function(token) {
+    // Verify the token on the server.
+    });
+});
+
