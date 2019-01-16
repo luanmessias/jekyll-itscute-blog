@@ -7,7 +7,7 @@ title:  "Virada Black Liberdade"
 date:   2018-11-18 16:30:00 -0300
 categories: beleza
 resume: "Mais de 100 lojistas do bairro da Liberdade se reúnem para evento inédito no Brasil."
-img: "https://lh3.googleusercontent.com/AR2IGKLOmVD8gQlrhX7pr20fl_iBhJgFiUynBVPtZSTu0bL5C-Tl1lj13YA5rkVTCX34ZGntkoaL"
+img: "https://lh3.googleusercontent.com/MJooqsQptt5ueY4mokUrAAcu8cbP1MrExUOrMB3SFWdu9BhKBgy0mj2fd5rikG-yKGrSofnuOVB52A"
 
 ---
 
