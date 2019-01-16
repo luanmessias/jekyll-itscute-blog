@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-destaque: true
+destaque: false
 author: "bruna"
 title:  "Virada Black Liberdade"
 date:   2018-11-18 16:30:00 -0300
