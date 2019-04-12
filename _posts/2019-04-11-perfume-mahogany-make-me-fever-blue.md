@@ -3,8 +3,8 @@ layout: post
 comments: true
 destaque: true
 author: "bruna"
-title:  "Novidades Nicole Lee na Couromoda 2019"
-date:   2019-4-11 09:20:00 -0300
+title:  "Novidade Mahogany"
+date:   2019-4-1 09:20:00 -0300
 categories: beleza
 resume: "A Mahogany, uma das principais empresas do mercado lançaram recentemente a fragrância e hidratante, Make Me Fever Blue. Produtos incríveis para serem usados no nosso dia a dia e nos deixar ainda mais perfumada."
 img: "https://lh3.googleusercontent.com/g2euFMgHh5U8jWfTPRTr8DuU4mmmqmRdhXCYKzT_6RYRipph6iZMT0bvRSY67l4H4jsZfeMrVP09Cw"
