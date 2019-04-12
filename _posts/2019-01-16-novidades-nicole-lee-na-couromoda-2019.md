@@ -1,10 +1,10 @@
 ---
 layout: post
 comments: true
-destaque: true
+destaque: false
 author: "bruna"
 title:  "Novidades Nicole Lee na Couromoda 2019"
-date:   2019-01-16 16:20:00 -0300
+date:   2019-1-16 16:20:00 -0300
 categories: moda
 resume: "Se você me acompanha no Instagram @itscuteblog, sabe que fui conferir de perto as novidades da Nicole Lee USA, marca de bolsas veganas."
 img: "https://lh3.googleusercontent.com/g791M8Sj1hiOBk42_h1eYHyrEqBtkQoG7rcdKOfFP8sVBgfWdZoM40U3fYIZ4_2ivgvPAa5XgymRVQ"
@@ -12,8 +12,6 @@ img: "https://lh3.googleusercontent.com/g791M8Sj1hiOBk42_h1eYHyrEqBtkQoG7rcdKOfF
 Oi, gente linda. Tudo bem?
 
 Se você me acompanha no Instagram [@itscuteblog](instagram.com/itscuteblog), sabe que fui conferir de perto as novidades da [Nicole Lee USA](https://www.nicoleleeusa.com.br/), marca de bolsas veganas.
-
-![enter image description here](https://lh3.googleusercontent.com/5qSOCockYJd6MyWfsUCi2YP9nc6fv9rU9AWEYJCIzF-JIXk-w7-N04MaKltCCI9hy1Na1CUx9gsjgQ "Nicole Lee Brasil")
 
 Com muita inovação e versatilidade, a marca aposta em cores, mix de estampas e modelos diferenciados para essa nova coleção.
 
